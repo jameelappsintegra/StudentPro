@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header(props){
+const Header = (props) =>{
     return <h4>{props.title}</h4>;
 }
 

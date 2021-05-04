@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Header from './Header'
 
 function Nav(){
     return(
@@ -8,6 +8,7 @@ function Nav(){
             <div className="humburger">
                 <i className="las la-bars"></i>
             </div>
+            <Header title="Profile" />
             <div className="edit">
                 <i className="las la-user-edit"></i>
             </div>

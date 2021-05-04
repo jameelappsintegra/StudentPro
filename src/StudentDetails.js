@@ -1,6 +1,6 @@
 import React from 'react';
 
-function StudentDetails() {
+const  StudentDetails = () => {
     return <h1>Student Details</h1>
 }
 
