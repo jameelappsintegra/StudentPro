@@ -12,7 +12,7 @@ function Nav(){
                 <i className="las la-user-edit"></i>
             </div>
         </div>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -28,7 +28,7 @@ function Nav(){
           <li>
             <Link to="/also/will/not/match">Also Will Not Match</Link>
           </li>
-        </ul>
+        </ul> */}
       </>
     )
 }
