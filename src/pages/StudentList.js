@@ -8,7 +8,9 @@ const StudentList = () => {
                 data.map((i) => {
                     return (
                         <Card
+
                             isStudentList={true}
+                            id={i.id}
                             name={i.name}
                             roll={i.roll}
                             class={i.class}
