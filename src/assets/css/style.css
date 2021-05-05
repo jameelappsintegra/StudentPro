@@ -292,6 +292,11 @@ body {
 .year{
     grid-area: year;
 }
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-gap: 10px;
+}
 .student-card .student-profile {
     display: flex;
     flex-direction: column;

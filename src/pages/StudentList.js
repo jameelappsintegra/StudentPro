@@ -3,10 +3,11 @@ import Card from '../components/Card'
 
 const StudentList = () => {
     return (
-        <>
+        <div className="student-grid">
             {
                 data.map((i) => {
                     return (
+
                         <Card
                             isStudentList={true}
                             name={i.name}
@@ -18,8 +19,7 @@ const StudentList = () => {
                     )
                 })
             }
-
-        </>
+        </div>
     )
 }
 
