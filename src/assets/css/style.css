@@ -267,7 +267,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 55px;
-    padding: 15px;
+    padding: 10px;
     grid-template-areas: "student-profile student-profile student-profile"
     "class roll year";
     grid-gap: 10px;
