@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from './Header'
 
-function Nav(){
-    return(
-      <>
-        <div className="header">
-            <div className="humburger">
-                <i className="las la-bars"></i>
-            </div>
-            <Header title="Profile" />
-            <div className="edit">
-                <i className="las la-user-edit"></i>
-            </div>
+function Nav() {
+  return (
+    <div>
+      <div className="header">
+        <div className="humburger">
+          <i className="las la-bars"></i>
         </div>
-        {/* <ul>
+        <Header title="Profile" />
+        <div className="edit">
+          <i className="las la-user-edit"></i>
+        </div>
+      </div>
+      {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -30,7 +30,7 @@ function Nav(){
             <Link to="/also/will/not/match">Also Will Not Match</Link>
           </li>
         </ul> */}
-      </>
-    )
+    </div>
+  )
 }
 export default Nav;

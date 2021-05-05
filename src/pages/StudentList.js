@@ -7,7 +7,6 @@ const StudentList = () => {
             {
                 data.map((i) => {
                     return (
-
                         <Card
                             isStudentList={true}
                             name={i.name}

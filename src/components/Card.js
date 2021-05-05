@@ -4,7 +4,7 @@ import img from '../assets/img/student-1.jpg';
 
 const Card = (props) => {
     return (
-        <>
+        <div>
             {!props.isStudentList ?
                 <Link className="card" to={`/${props.link}`}>
                     <div className="card-body">
@@ -39,8 +39,7 @@ const Card = (props) => {
                 </div>
             }
 
-        </>
-
+        </div>
     );
 }
 
