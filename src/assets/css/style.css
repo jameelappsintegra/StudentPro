@@ -260,6 +260,47 @@ body {
     font-size: 1.8rem;
     color: #587cd8;
 }
+.student-card{
+    margin: 0 0 10px 0;
+}
+.student-card .card-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 55px;
+    padding: 15px;
+    grid-template-areas: "student-profile student-profile student-profile"
+    "class roll year";
+    grid-gap: 10px;
+}
+.student-profile{
+    grid-area: student-profile;
+}
+.class{
+    grid-area: class;
+    border-right: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.roll{
+    grid-area: roll;
+    border-right: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.year{
+    grid-area: year;
+}
+.student-card .student-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.student-card .student-profile .copy{
+    color: #000;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
