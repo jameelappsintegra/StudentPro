@@ -44,4 +44,8 @@ const Card = (props) => {
     );
 }
 
+
+const studentDetails = () => {
+    console.log('this', this);
+}
 export default Card;
