@@ -27,7 +27,7 @@ function Main() {
             </div>
             <div className="student-cards">
                 <Card copy="Home Work" icon={quiz} link="student-details" />
-                <Card copy="Syllabus" icon={Syllabus} link="student-list" />
+                <Card copy="Student List" icon={Syllabus} link="student-list" />
                 <Card copy="Attendance" icon={Attendance} />
                 <Card copy="School Hoildays" icon={Hoildays} />
                 <Card copy="Results" icon={Results} />
