@@ -15,7 +15,7 @@ const Card = (props) => {
                     </div>
                 </Link>
                 :
-                <Link to={`/student-details/${props.id}`}>
+                <Link to={`/student-details/${props.id}`} key={props.i}>
                     <div className="card student-card">
                         <div className="card-body">
                             <div className="student-profile">

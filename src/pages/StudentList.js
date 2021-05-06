@@ -1,21 +1,34 @@
-import React from 'react';
+import { useQuery } from '@apollo/client';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card'
+import { GET_ALL_STUDENTLIST } from "./graphql";
 
 const StudentList = () => {
+
+    const { data: studentList } = useQuery(GET_ALL_STUDENTLIST);
+    const [studentListItems, setStudentListItems] = useState([]);
+
+    useEffect(() => {
+        if (studentList) {
+            setStudentListItems(studentList.student);
+        }
+    }, [studentList]);
+
+    console.log(studentListItems);
     return (
         <div className="student-grid">
             {
-                data.map((i) => {
+                studentListItems && studentListItems.map((item, i) => {
                     return (
                         <Card
-
+                            key={i}
                             isStudentList={true}
-                            id={i.id}
-                            name={i.name}
-                            roll={i.roll}
-                            class={i.class}
-                            fromYear={i.year.from}
-                            toYear={i.year.to}
+                            id={item.id}
+                            name={item.student_name}
+                            roll={item.roll}
+                            class={item.class}
+                            fromYear={item.from_year}
+                            toYear={item.to_year}
                         />
                     )
                 })
@@ -23,80 +36,5 @@ const StudentList = () => {
         </div>
     )
 }
-
-const data = [
-    {
-        "id": "1",
-        "img": "",
-        "name": "Hind Khamis",
-        "class": "VI",
-        "roll": "02",
-        "admissionDate": "20-Apr-2016",
-        "bloodGroup": "o+",
-        "gender": "Male",
-        "status": "Active",
-        "Adress": "Dubai",
-        "dob": "19-Apr-2018",
-        "gpa": "80",
-        "year": {
-            "from": "2020",
-            "to": "2021"
-        },
-        "attandance": [
-            {
-                "start": "10-Apr-2005",
-                "end": ""
-            }
-        ]
-    },
-    {
-        "id": "2",
-        "img": "",
-        "name": "Mohamed Obaid",
-        "class": "V",
-        "roll": "03",
-        "admissionDate": "20-Apr-2016",
-        "bloodGroup": "o+",
-        "gender": "Male",
-        "status": "Active",
-        "Adress": "Dubai",
-        "dob": "19-Apr-2018",
-        "gpa": "80",
-        "year": {
-            "from": "2020",
-            "to": "2003"
-        },
-        "attandance": [
-            {
-                "start": "10-Apr-2005",
-                "end": ""
-            }
-        ]
-    },
-    {
-        "id": "3",
-        "img": "",
-        "name": "Meera Salem",
-        "class": "III",
-        "roll": "01",
-        "admissionDate": "20-Apr-2016",
-        "bloodGroup": "o+",
-        "gender": "Male",
-        "status": "Active",
-        "Adress": "Dubai",
-        "dob": "19-Apr-2018",
-        "gpa": "80",
-        "year": {
-            "from": "2019",
-            "to": "2020"
-        },
-        "attandance": [
-            {
-                "start": "10-Apr-2005",
-                "end": ""
-            }
-        ],
-    },
-]
 
 export default StudentList;
